@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% include head.html %}
+</head>
+<body class="{{ page.layout }}">
+
+    <div id="map"{% if page.layout != "index" %} class="hidden"{% endif %}>
+        <div id="map-fixed">
+            <div id="map-logo" class="overlay large black center"><a href="http://localhost:1025">reggi.com</a></div>
+            <div id="map-copyright" class="overlay hide"><span>Imagery &copy; TerraMetrics <a href="http://www.google.com/intl/en-US_US/help/terms_maps.html">Terms of Use</a></span></div>
+            <div id="map-navigation" class="overlay hide"><i class="icon-chevron-right"></i></div>
+            <div id="map-canvas"></div>
+        </div>
+    </div>

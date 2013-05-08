@@ -1,0 +1,10 @@
+safe: false
+auto: true
+server: true
+server_port: 1025
+markdown: redcarpet
+# made up
+sitename: "Elaborate"
+tagline: "Get it in context!"
+author: "Thomas Reggi"
+descritption: "Life is simple, let's elaborate."

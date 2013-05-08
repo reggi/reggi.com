@@ -1,0 +1,40 @@
+{% include header.html %}
+
+    <div class="container-fluid first">
+        <div class="container article">
+            <div class="row title">
+                <div class="span12">
+                    <h1 class="title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
+                </div>
+            </div>
+            <div class="row post">
+                <div class="span5 images">
+                    {% for image in page.images %}
+                    <a href="{{image.src}}"><img src="{{image.src}}" alt="{{image.alt}}"></a>
+                    {% endfor %}
+                </div>
+                <div class="span6 rail">
+                    <div class="text">
+                        <div class="content">
+                        {{ content }}
+                        </div>
+                        <div class="meta">
+                            <span class="date">
+                                {% if page.stamp.month %}
+                                {{ page.date | date: "%B %Y" }}
+                                {% else %}
+                                {{ page.date | date: "%B %d, %Y" }}
+                                {% endif %}
+                            </span>
+                            <span class="tags">
+                                {{ page.tags | join: ", " | }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
